@@ -1,0 +1,27 @@
+name: BookEditPlugin
+version: 1.0
+main: bookeditplugin.bookeditplugin.BookEdit
+api-version: 1.17
+
+commands:
+  bookedit:
+    aliases:
+      - bedit
+      - be
+    permission: bookedit.op
+
+permissions:
+  bookedit:
+    children:
+      bookedit.allperm:
+        default: op
+      bookedit.runcmd:
+        default: op
+      bookedit.hovertext:
+        default: op
+      bookedit.changepage:
+        default: op
+      bookedit.copy:
+        default: op
+      bookedit.url:
+        default: op
