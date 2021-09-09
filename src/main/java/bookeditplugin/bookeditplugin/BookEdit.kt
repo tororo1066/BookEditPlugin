@@ -52,6 +52,7 @@ class BookEdit : JavaPlugin(){
                 sender.sendMessage("§b/be help このメッセージを表示します")
                 sender.sendMessage("§b/be howto 書き込みの方法を表示します")
                 sender.sendMessage("§b/be list 書き込み方法のリストを表示します")
+                sender.sendMessage("§b/be color カラーコード一覧表を表示します")
                 sender.sendMessage("§a=============BookEditPlugin==Author:tororo_1066")
                 return true
             }
@@ -80,6 +81,15 @@ class BookEdit : JavaPlugin(){
                 sender.sendMessage("§e\\HoverCopy:<テキスト>:<コピーするテキスト>:<ホバーテキスト>\\ §bid:7")
                 sender.sendMessage("§e\\HoverURL:<テキスト>:<URL>:<ホバーテキスト>\\ id:8")
                 sender.sendMessage("§c\\<id>:<テキスト>:etc...\\でも可能です")
+                return true
+            }
+
+            "colorcode","color"->{
+                sender.sendMessage("カラーコード表")
+                sender.sendMessage("§0黒色 &0 §1濃い青色 &1 §2濃い緑色 &2 §3濃い水色 &3 §4濃い赤色 &4")
+                sender.sendMessage("§5濃い紫色&5 §6金色 &6 §7灰色 &7 §8濃い灰色 &8 §9青色 &9")
+                sender.sendMessage("§a緑色 &a §b水色 &b §c赤色 &c §d紫色 &d §e黄色 &e §f白色 &f")
+                return true
             }
 
         }
@@ -97,7 +107,7 @@ class BookEdit : JavaPlugin(){
         if (alias == "bookedit" || alias == "bedit" || alias == "be"){
 
             if (args.size == 1){
-                return mutableListOf("help","list","howto")
+                return mutableListOf("help","list","howto","color")
             }
         }
         return mutableListOf()
